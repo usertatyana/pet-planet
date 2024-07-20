@@ -66,14 +66,8 @@ ul {
 h1,
 h2,
 h3,
-p,
-figure,
-fieldset {
+p {
     margin: 0;
-}
-
-iframe {
-    border: none;
 }
 
 .visually-hidden {
@@ -85,6 +79,11 @@ iframe {
     max-width: 1404px;
     padding: 0 52px;
     margin: 0 auto;
+
+    @include bigscreen {
+        max-width: 1600px;
+        padding: 0 60px;
+    }
 
     @include tablet {
         padding: 0 46px;

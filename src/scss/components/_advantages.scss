@@ -6,13 +6,11 @@
     color: $light;
 
     &__bg {
-
         border-radius: 300px 300px 0 0;
         background-color: $carrot;
         background-image: url("/img/pattern.svg");
-        background-size: cover;
         background-position: center;
-        background-repeat: no-repeat;
+        background-repeat: repeat;
         padding: 100px 0;
 
         @include laptop {
@@ -77,26 +75,47 @@
         background-repeat: no-repeat;
 
         @include laptop {
-            padding-top: 86px;
-            background-size: 800px;
+            padding-top: 172px;
+            background-size: 160px;
         }
 
         @include mobile {
-            padding-top: 172px;
-            background-size: 160px;
+            padding-top: 86px;
+            background-size: 80px;
         }
     }
 
     &__item-assortmen {
         background-image: url("/img/assortmen.png");
+        background-image: image-set(
+            url('/img/assortiment.avif') type('image/avif') 1x,
+            url('/img/assortiment@2x.avif') type('image/avif') 2x,
+            url('/img/assortiment.webp') type('image/webp') 1x,
+            url('/img/assortiment@2x.webp') type('image/webp') 2x,
+            url('/img/assortiment.png') type('image/png') 1x,
+            url('/img/assortiment@2x.png') type('image/png') 2x);
     }
 
     &__item-quality {
         background-image: url("/img/quality.png");
+        background-image: image-set(
+            url('/img/quality.avif') type('image/avif') 1x,
+            url('/img/quality@2x.avif') type('image/avif') 2x,
+            url('/img/quality.webp') type('image/webp') 1x,
+            url('/img/quality@2x.webp') type('image/webp') 2x,
+            url('/img/quality.png') type('image/png') 1x,
+            url('/img/quality@2x.png') type('image/png') 2x);
     }
 
     &__item-personal {
         background-image: url("/img/personal.png");
+        background-image: image-set(
+            url('/img/personal.avif') type('image/avif') 1x,
+            url('/img/personal@2x.avif') type('image/avif') 2x,
+            url('/img/personal.webp') type('image/webp') 1x,
+            url('/img/personal@2x.webp') type('image/webp') 2x,
+            url('/img/personal.png') type('image/png') 1x,
+            url('/img/personal@2x.png') type('image/png') 2x);
     }
 
     &__subtitle {
@@ -126,11 +145,14 @@
         width: 306px;
         height: 306px;
         background-image: url("/img/start-green.svg");
-        background-size: contain;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+
+        @include bigscreen {
+            left: calc(50% - 820px);
+        }
 
         @include laptop {
             width: 257px;
@@ -182,8 +204,19 @@
         top: -338px;
         right: 0;
         background-image: url("/img/dog.png");
+        background-image: image-set(
+            url('/img/dog.avif') type('image/avif') 1x,
+            url('/img/dog@2x.avif') type('image/avif') 2x,
+            url('/img/dog.webp') type('image/webp') 1x,
+            url('/img/dog@2x.webp') type('image/webp') 2x,
+            url('/img/dog.png') type('image/png') 1x,
+            url('/img/dog@2x.png') type('image/png') 2x);
         background-size: contain;
         z-index: -1;
+
+        @include bigscreen {
+            right: calc(50% - 840px);
+        }
 
         @include laptop {
             width: 272px;
@@ -199,12 +232,12 @@
             right: -25px;
         }
 
-                @include mobile {
-                    width: 100px;
-                    height: 169px;
-                    right: 0;
-                    top: -82px;
-                }
+        @include mobile {
+            width: 100px;
+            height: 169px;
+            right: 0;
+            top: -82px;
+        }
     }
 
 }

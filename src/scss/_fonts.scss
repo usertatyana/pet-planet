@@ -4,7 +4,11 @@
 :root {
     --font-size: 24px;
 
-    @include  laptop {
+    @include bigscreen {
+        --font-size: 28px;  
+    }
+
+    @include laptop {
         --font-size: 20px;
     }
 
@@ -12,7 +16,7 @@
         --font-size: 14px;
     }
 
-    
+
 }
 
 $font-family: "Onest", sans-serif;
